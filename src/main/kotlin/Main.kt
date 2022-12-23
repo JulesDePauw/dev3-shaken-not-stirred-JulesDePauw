@@ -40,7 +40,7 @@ if no("here is the bill")
         //you are low on ... this is what you should buy and it wil cost ...
 
     }
-
+//Todo 
     //TODO show menu (5mocktails 5cocktails)
     //TODO client orders drink
     //TODO If client asks cocktail ask age
