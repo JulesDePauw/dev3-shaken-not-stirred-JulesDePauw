@@ -3,55 +3,67 @@ import java.time.LocalDateTime
 import java.util.*
 
 fun main() {
-    val userAwnser = readLine()
+
+    introduction()}
     fun introduction() {
+        val userAwnser = readLine()
         println("are you a client or manager?")
         if (userAwnser == "client") {
-           fun client()
-        } if (userAwnser == "manager")
-           fun manager()
+           client()
+        }; else if (userAwnser == "manager"){
+            manager()
+        }; else (println("I'm sorry I didn't understand your awnser"))
+    }
 
-        } else {println("I'm sorry I didn't understand your awnser")
-    }
-    }
-    fun client(){
+
+
+
+
+fun client() {
         println(
-            "Welcome to juke's cocktail bar.\n My name is Jules and I have been working as a bartender for over 7 years now.\n I started my own cocktail bar and descided to only work with my favorite brands and ingredients to ensure a sertain level of quality. \nI hope you enjoy. \nCan I get your name pleas so I know on what name I can take your order.
+            "Welcome to juke's cocktail bar.\n My name is Jules and I have been working as a bartender for over 7 years now.\n I started my own cocktail bar and descided to only work with my favorite brands and ingredients to ensure a sertain level of quality. \nI hope you enjoy. \nCan I get your name pleas so I know on what name I can take your order."
         )
-       val clientName= readLine()
+        val clientName = readLine()
         //save client to database
         println(
             "could I just ask you your date of birth please.\n We don't wanna be serving alcohol to underaged people (yyyy-mm-dd)"
         )
-        fun age(args: Array<String>) {
+       // fun age(args: Array<String>) {
 
-            var str = readLine()
-            var delimiter = "-"
+       //     var str = readLine()
+        //    var delimiter = "-"
 
-            val parts = str.split(delimiter)
+        //    val parts = str.split(delimiter)
 
-            print(parts)
-        }
-        val current = LocalDateTime.of(
-            calendar.get(Calendar.YEAR),
-            calendar.get(Calendar.MONTH),
-            calendar.get(Calendar.DAY_OF_MONTH),)
+        //    print(parts) }
+
+       // val current = LocalDateTime.of(
+       //     calendar.get(Calendar.YEAR),
+      //      calendar.get(Calendar.MONTH),
+       //     calendar.get(Calendar.DAY_OF_MONTH), )
 
         //save age to database
-If age > 18
-println("you are old enoug to enyoj a cocktail here is our menue")
-If age < 18
-println("I'm sorry but you are to young for a cocktail, here is our mocktail menue")
-        fun order(){
-println("can I take your order pleas. (write amount, cocktail. vb: 1 mojito, 2 mezcal mule")
-
-println("here you got 1 mojito and 2 mezcal mule, enjoy")
-println("would you like something else?(awnser with yes or no)")
+        var age = 19
+        if (age > 18) {
+            println("you are old enoug to enyoj a cocktail here is our menue")
         }
-if yes order
-if no("here is the bill")
+        if (age < 18) {
+            println("I'm sorry but you are to young for a cocktail, here is our mocktail menue")
+        }
+        fun order() {
+            println("can I take your order pleas. (write amount, cocktail. vb: 1 mojito, 2 mezcal mule")
+
+            println("here you got 1 mojito and 2 mezcal mule, enjoy")
+            println("would you like something else?(awnser with yes or no)")
+        }
+        if (readLine() == "yes") {
+            order()
+        }
+        if (readLine() == "no") {
+            println("here is the bill")
+        }
     }
-    fun menager(){
+    fun manager(){
         println("here is an overview of the sales, stock and revenue")
         //you have sold x amount cocktails and made x amount of profit.
         //you have X amount of euro's worth in stock
@@ -69,4 +81,3 @@ if no("here is the bill")
 
 
 
-}
