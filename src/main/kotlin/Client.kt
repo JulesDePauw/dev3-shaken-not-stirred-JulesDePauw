@@ -1,6 +1,6 @@
 class Client(
-    val client id: string,
-    val name: string,
-    val order: string,
-    val bill: string
+    val clientId: String,
+    val name: String,
+    val order: String,
+    val bill: String
 )

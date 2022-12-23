@@ -1,3 +1,7 @@
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.util.*
+
 fun main() {
     val userAwnser = readLine()
     fun introduction() {
@@ -17,8 +21,22 @@ fun main() {
        val clientName= readLine()
         //save client to database
         println(
-            "could I just ask you your date of birth please.\n We don't wanna be serving alcohol to underaged people"
+            "could I just ask you your date of birth please.\n We don't wanna be serving alcohol to underaged people (yyyy-mm-dd)"
         )
+        fun age(args: Array<String>) {
+
+            var str = readLine()
+            var delimiter = "-"
+
+            val parts = str.split(delimiter)
+
+            print(parts)
+        }
+        val current = LocalDateTime.of(
+            calendar.get(Calendar.YEAR),
+            calendar.get(Calendar.MONTH),
+            calendar.get(Calendar.DAY_OF_MONTH),)
+
         //save age to database
 If age > 18
 println("you are old enoug to enyoj a cocktail here is our menue")
@@ -40,7 +58,6 @@ if no("here is the bill")
         //you are low on ... this is what you should buy and it wil cost ...
 
     }
-//Todo 
     //TODO show menu (5mocktails 5cocktails)
     //TODO client orders drink
     //TODO If client asks cocktail ask age
