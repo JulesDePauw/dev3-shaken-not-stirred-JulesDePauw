@@ -1,23 +1,32 @@
 import java.time.LocalDate
 import java.time.LocalDateTime
+import java.sql.*
+import java.sql.Connection
 import java.util.*
+val credentials = Credentials()
+val connection = getConnection(credentials)
+
+//val statement = connection.prepareStatement("SELECT name FROM `cocktails`;")
+//println("${statement}");
 
 fun main() {
 
+
+
+
+
+
     introduction()}
     fun introduction() {
-        val userAwnser = readLine()
         println("are you a client or manager?")
-        if (userAwnser == "client") {
+        val userInput = readln()
+        if (userInput == "client") {
            client()
-        }; else if (userAwnser == "manager"){
+        };else if (userInput == "manager"){
             manager()
-        }; else (println("I'm sorry I didn't understand your awnser"))
+        }; else {println("I'm sorry I didn't understand your awnser")
+        introduction()}
     }
-
-
-
-
 
 fun client() {
         println(
@@ -45,11 +54,50 @@ fun client() {
         //save age to database
         var age = 19
         if (age > 18) {
-            println("you are old enoug to enyoj a cocktail here is our menue")
+            println("you are old enoug to enyoj a cocktail here is our menu")
+            //TODO show cocktail menu
+            //TODO First SQL injection//
+
+
+
+///////////////
+
+            val statement = connection.prepareStatement(
+                "SELECT * FROM `cocktails` "
+            )
+
+            val cocktail = statement.executeQuery()
+
+            while (cocktail!!.next()) {
+                val cocktailMenu = Cocktail(
+                    cocktail.getString("id"),
+                    cocktail.getString("name"),
+                    cocktail.getString("ingredients"),
+                    cocktail.getString("alcohol")
+                )
+
+                println("${cocktailMenu.name}")
+            }
+
+
+
+            /////////////////
+
+
+
+
+
+
+
+
+
+
         }
         if (age < 18) {
-            println("I'm sorry but you are to young for a cocktail, here is our mocktail menue")
+            println("I'm sorry but you are to young for a cocktail, here is our mocktail menu")
+            //TODO show mocktail menu
         }
+
         fun order() {
             println("can I take your order pleas. (write amount, cocktail. vb: 1 mojito, 2 mezcal mule")
 
@@ -80,4 +128,21 @@ fun client() {
     //show sales and revenue
 
 
+fun getConnection(credentials: Credentials): Connection {
+    val connectionProps = Properties()
+    connectionProps["user"] = credentials.databaseUser
+    connectionProps["password"] = credentials.databasePassword
+    Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance()
+    return DriverManager.getConnection(
+        "jdbc:" + "mysql" + "://" +
+                "dt5.ehb.be" +
+                ":" + "3306" + "/" +
+                credentials.databaseName,
+        connectionProps
+    )
+}
 
+fun executeQuery(connection: Connection, query: String): ResultSet? {
+    val statement = connection.prepareStatement(query)
+    return statement.executeQuery()
+}
