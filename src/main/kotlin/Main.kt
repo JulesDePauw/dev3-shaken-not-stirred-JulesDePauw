@@ -1,0 +1,55 @@
+fun main() {
+    val userAwnser = readLine()
+    fun introduction() {
+        println("are you a client or manager?")
+        if (userAwnser == "client") {
+           fun client()
+        } if (userAwnser == "manager")
+           fun manager()
+
+        } else {println("I'm sorry I didn't understand your awnser")
+    }
+    }
+    fun client(){
+        println(
+            "Welcome to juke's cocktail bar.\n My name is Jules and I have been working as a bartender for over 7 years now.\n I started my own cocktail bar and descided to only work with my favorite brands and ingredients to ensure a sertain level of quality. \nI hope you enjoy. \nCan I get your name pleas so I know on what name I can take your order.
+        )
+       val clientName= readLine()
+        //save client to database
+        println(
+            "could I just ask you your date of birth please.\n We don't wanna be serving alcohol to underaged people"
+        )
+        //save age to database
+If age > 18
+println("you are old enoug to enyoj a cocktail here is our menue")
+If age < 18
+println("I'm sorry but you are to young for a cocktail, here is our mocktail menue")
+        fun order(){
+println("can I take your order pleas. (write amount, cocktail. vb: 1 mojito, 2 mezcal mule")
+
+println("here you got 1 mojito and 2 mezcal mule, enjoy")
+println("would you like something else?(awnser with yes or no)")
+        }
+if yes order
+if no("here is the bill")
+    }
+    fun menager(){
+        println("here is an overview of the sales, stock and revenue")
+        //you have sold x amount cocktails and made x amount of profit.
+        //you have X amount of euro's worth in stock
+        //you are low on ... this is what you should buy and it wil cost ...
+
+    }
+
+    //TODO show menu (5mocktails 5cocktails)
+    //TODO client orders drink
+    //TODO If client asks cocktail ask age
+    //TODO if client is younger than 18 Decline alcohol
+    //Bereken prijzen aan de hand van prijzen ingredienten
+    //save sales in database
+        //save stock in database
+    //show sales and revenue
+
+
+
+}
