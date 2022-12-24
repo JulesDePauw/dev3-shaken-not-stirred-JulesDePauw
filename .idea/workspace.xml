@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd164bec-11b7-4848-b5fe-d72edfba44db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Connection.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Credentials.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Order.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev3-shaken-not-stirred-JulesDePauw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dev3-shaken-not-stirred-JulesDePauw.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Client.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/user.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Cocktail.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Cocktail.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Ingredient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Ingredient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/user.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Client.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,20 +86,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
-          <line>11</line>
-          <properties method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
